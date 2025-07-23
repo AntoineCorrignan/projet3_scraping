@@ -14,4 +14,5 @@ dependencies = [
     "psycopg2-binary>=2.9.10",
     "requests>=2.32.4",
     "seaborn>=0.13.2",
+    "streamlit>=1.47.0",
 ]
