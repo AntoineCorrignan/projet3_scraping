@@ -4,38 +4,6 @@ BASE_URL = "https://fr.trustpilot.com/review/nickel.eu?page="
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 SLEEP_TIME = 1
 
-# configuration des mois pour l'extraction des dates
-MOIS_MAPPING = {
-    'janvier': 'January', 'février': 'February', 'mars': 'March',
-    'avril': 'April', 'mai': 'May', 'juin': 'June',
-    'juillet': 'July', 'août': 'August', 'septembre': 'September',
-    'octobre': 'October', 'novembre': 'November', 'décembre': 'December',
-    'janv.': 'January', 'févr.': 'February', 'mars.': 'March', 
-    'avr.': 'April', 'mai.': 'May', 'juin.': 'June',
-    'juil.': 'July', 'août.': 'August', 'sept.': 'September',
-    'oct.': 'October', 'nov.': 'November', 'dec.': 'December',
-    'aout': 'August'
-}
-
-
-####### bdd postgre remote #######
-# --- NOUVELLES INFORMATIONS DE CONNEXION POSTGRESQL ---
-DB_NAME = "scraped_nickel_reviews"
-DB_USER = "neondb_owner"
-DB_PASSWORD = "npg_nMbf3cliNj0y"
-DB_HOST = "ep-misty-dawn-a2l7mwke-pooler.eu-central-1.aws.neon.tech"
-DB_PORT = "5432"
-
-
-# ####### bdd postgre locale #######
-
-# # --- NOUVELLES INFORMATIONS DE CONNEXION POSTGRESQL ---
-# DB_NAME = "ma_base_trustpilot_locale"  # Le nom de votre base de données PostgreSQL
-# DB_USER = "antoine"                   # L'utilisateur PostgreSQL que vous avez créé/utilisez
-# DB_PASSWORD = "Antoine120788!!"       # Le mot de passe de votre utilisateur PostgreSQL
-# DB_HOST = "localhost"                  # L'hôte (pour une base locale)
-# DB_PORT = "5432"                       # Le port par défaut de PostgreSQL
-
 ######################################
 
 # --- SCHEMA DE TABLE POSTGRESQL ---
@@ -87,4 +55,17 @@ CREATE TABLE IF NOT EXISTS reviews_nickel (
 #    date_scraping DATETIME
 # )
 # """
-###################################
+
+
+# configuration des mois pour l'extraction des dates
+MOIS_MAPPING = {
+    'janvier': 'January', 'février': 'February', 'mars': 'March',
+    'avril': 'April', 'mai': 'May', 'juin': 'June',
+    'juillet': 'July', 'août': 'August', 'septembre': 'September',
+    'octobre': 'October', 'novembre': 'November', 'décembre': 'December',
+    'janv.': 'January', 'févr.': 'February', 'mars.': 'March', 
+    'avr.': 'April', 'mai.': 'May', 'juin.': 'June',
+    'juil.': 'July', 'août.': 'August', 'sept.': 'September',
+    'oct.': 'October', 'nov.': 'November', 'dec.': 'December',
+    'aout': 'August'
+}
